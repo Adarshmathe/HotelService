@@ -1,0 +1,33 @@
+server:
+  port: 8082
+  
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hotel
+    username: postgres
+    password: India#123
+    driver-class-name: org.postgresql.Driver
+  
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+   
+  application:
+    name: HOTEL-SERVICE     
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:1001/eureka
+      
+      
+okta:
+  oauth2:
+    issuer: https://dev-69692373.okta.com/oauth2/default
+    audience: api://default
